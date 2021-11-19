@@ -3,10 +3,10 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Web3Modal from "web3modal";
 
-import { nftaddress, nftmarketaddress } from ".config.js";
+import { nftaddress, nftmarketaddress } from "../config.js";
 
 import NFT from "../artifacts/contracts/NFT.sol/NFT.json";
-import Market from "../artifacts/contracts/NFTMarket.sol/NFTMarket.json";
+import Market from "../artifacts/contracts/NFTMarketplace.sol/NFTMarket.json";
 
 export default function Home() {
   const [nfts, setNfts] = useState([]);
@@ -78,7 +78,7 @@ export default function Home() {
           {
             nfts.map((nft, i) => (
               <div key={i} className="boarder shadow rounde-xl overflow-hidden">
-                <img src={nft.image} />
+                <imgage src={nft.image} />
                 <div className='p-4'>
                   <p style={{ height: '64px'}} className="text-2xl font-semibold">{nft.name}</p>
                   <div style={{ height: '70px', overflow: 'hidden'}}>
